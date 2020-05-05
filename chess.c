@@ -1,26 +1,22 @@
+#include "board.h"
+#include "board_print_plain.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
 	char board[9][9]={{"XABCDEFGH"},
-			  {"8rnbqkbnr"},
-			  {"7pppppppp"},
-			  {"6        "},
-			  {"5        "},
-			  {"4        "},
+			  {"1rnbqkbnr"},
+			  {"2pppppppp"},
 			  {"3        "},
-			  {"2PPPPPPPP"},
-	  	 	  {"1RNBQKBNR"}};
+			  {"4        "},
+			  {"5        "},
+			  {"6        "},
+			  {"7PPPPPPPP"},
+	  	 	  {"8RNBQKBNR"}};
 
-	for (int i=0;i<9;i++)
-	{
-		for (int j=0;j<9;j++)
-		{
-			printf("%c ", board[i][j]);
-		}
-		printf("\n");
-	}
-
+	print_board(board);
+   // move(board);
+    //print_board(board);
 	return 0;
 }
