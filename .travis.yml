@@ -1,4 +1,4 @@
-language: c
-rvm:
-	-"1.9.2"
-script: gulp travis
+dist: xenial
+
+script:
+	- git ls-file scr/ | xargs clang-format -i && git diff --exit-code
