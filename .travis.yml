@@ -1,3 +1,4 @@
 language: c
 rvm:
 	-"1.9.2"
+script: gulp travis
