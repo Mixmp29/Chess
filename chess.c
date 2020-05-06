@@ -16,7 +16,7 @@ int main()
 	  	 	  {"8RNBQKBNR"}};
 
 	print_board(board);
-   // move(board);
-    //print_board(board);
+	move(board);
+	print_board(board);
 	return 0;
 }
