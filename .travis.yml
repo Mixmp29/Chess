@@ -1,0 +1,4 @@
+dist: xential
+
+script:
+        - git ls-file scr/ | xargs clang-format -i && git diff --exit-code
