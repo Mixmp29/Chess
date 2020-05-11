@@ -1,4 +1,4 @@
-dist: xential
+dist: xenial
 
 script:
-        - git ls-file scr/ | xargs clang-format -i && git diff --exit-code
+  - git ls-files scr/ | xargs clang-format -i && git diff --exit-code
