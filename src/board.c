@@ -6,9 +6,10 @@
 void move(char board[9][9])
 {
     char move[6];
+    char test_board[9][9];
     char figure;
     fgets(move, 6, stdin);
-    int i, j;
+    int i, j, c, d;
     for (int k = 0; k < strlen(move); k++)
     {
         if (move[k] != '-')
@@ -34,11 +35,27 @@ void move(char board[9][9])
                 default: printf("Incorrect input! \n");
             }
         }
-        else //if(move[k] == '-')   
-        { 
-            figure = board[j][i]; 
-            board[j][i] = ' ';
+        else //if(move[k] == '-')
+        {
+            c = i; d = j;
+            figure = board[j][i];
+            test_board[d][c] = ' ';
         }
     }
-    board[j][i] = figure;
+    switch(figure)
+    {
+        case 'P':   {
+                        if(c == i && (d-1 == j || d-2 == j) && d == 7)
+                        {
+                            board[d][c] = test_board[d][c];
+                            board[j][i] = figure;
+                        }
+                        else if(c == i && d-1 == j && d != 7)
+                        {
+                            board[d][c] = test_board[d][c];
+                            board[j][i] = figure;
+                        }
+                    }
+        //default:
+    }
 }
