@@ -2,6 +2,7 @@
 #include "board_print_plain.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
@@ -15,8 +16,12 @@ int main()
 			  {"7PPPPPPPP"},
 	  	 	  {"8RNBQKBNR"}};
 
-	print_board(board);
-	move(board);
-	print_board(board);
+    int flag_game = 0;
+
+    while(flag_game == 0)
+    {
+	    print_board(board);
+	    move(board);
+    }
 	return 0;
 }
