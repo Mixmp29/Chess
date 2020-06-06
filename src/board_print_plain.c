@@ -12,6 +12,7 @@ char board[8][8] = {{"rnbqkbnr"},
 
 void board_print(char board[8][8])
 {
+    printf("\n");
     printf("X A B C D E F G H\n");
     for (int i = 0; i < 8; i++) {
         printf("%d ", i + 1);
@@ -20,4 +21,5 @@ void board_print(char board[8][8])
         }
         printf("\n");
     }
+    printf("\n");
 }
